@@ -10,7 +10,7 @@ Setting up and using this library/package can be done in a few simple steps
     *  #### Via nuget package manager console  
     Simply type in the following command in the PM console
     ```
-    nuget install raz-header-attribute
+    Install-Package raz-header-attribute
     ```
     *  #### Via nuget package manager GUI  
     1. Right click on your solution
