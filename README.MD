@@ -10,12 +10,12 @@ Setting up and using this library/package can be done in a few simple steps
     *  #### Via nuget package manager console  
     Simply type in the following command in the PM console
     ```
-    Install-Package raz-header-attribute
+    Install-Package Raz.HeaderAttribute
     ```
     *  #### Via nuget package manager GUI  
     1. Right click on your solution
     2. click on the nuget package manager
-    3. search for raz-header-attribute
+    3. search for Raz.HeaderAttribute
     4. install :)
 
 2. ### Add the Attribute close to the controller parameter you wish to bind it to  
