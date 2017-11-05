@@ -13,7 +13,9 @@ namespace RazHeaderAttribute.Attributes
     public sealed class FromHeaderAttribute : ParameterBindingAttribute
     {
         private readonly string headerName;
-        public FromHeaderAttribute(string headerName)
+        private const string emptyString = ""; // string.Empty is not a compile time constant :(
+
+        public FromHeaderAttribute(string headerName = emptyString)
         {
             this.headerName = headerName;
         }

@@ -13,14 +13,10 @@ namespace RazHeaderAttribute.Bindings
     {
         private string name;
 
-        public FromHeaderBinding(HttpParameterDescriptor parameter, string headerName) : base(parameter)
+        public FromHeaderBinding(HttpParameterDescriptor parameter, string headerKey) : base(parameter)
         {
-            if (string.IsNullOrEmpty(headerName))
-            {
-                throw new ArgumentNullException("headerName");
-            }
-
-            this.name = headerName;
+            // If a header key wasn't passed, assume the parameter name :)
+            this.name = string.IsNullOrEmpty(headerKey) ? parameter.ParameterName : headerKey;
         }
 
         public override Task ExecuteBindingAsync(ModelMetadataProvider metadataProvider, HttpActionContext actionContext, CancellationToken cancellationToken)
