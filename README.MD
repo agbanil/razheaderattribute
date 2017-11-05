@@ -34,7 +34,7 @@ Setting up and using this library/package can be done in a few simple steps
             ...
             // GET api/yamandbeans
             [HttpGet]
-            public IEnumerable<string> Get([FromHeader("page")] int page, [FromHeader("rows")] string row)
+            public IEnumerable<string> Get([FromHeader("page")] int page, [FromHeader] string rows)
             {
                 // Print in the debug window to be sure our bound stuff are passed :)
                 Debug.WriteLine($"My Debugger!!! Arrrrrggggh!!!!: Rows {rows}, Page {page}");
